@@ -15,8 +15,16 @@ public class Empresa {
         return nombre;
     }
 
-    public ArrayList<Empleado> getList() {
+    public ArrayList<Empleado> getPlanilla() {
         return list;
+    }
+
+    public void addEmpleado(Empleado){
+
+    }
+
+    public void quitEmpleado(String){
+
     }
 
 
