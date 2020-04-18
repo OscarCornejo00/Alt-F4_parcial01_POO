@@ -2,14 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1154401b-7db7-4e30-b692-d8312567918c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/OACV/x00223019/CalculadoraImpuestos.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/OACV/x00223019/Documento.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/OACV/x00223019/Empleado.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/OACV/x00223019/Empresa.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/OACV/x00223019/PlazaFija.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/OACV/x00223019/ServicioProfesional.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/OACV/x00223019/CalculadoraImpuestos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/OACV/x00223019/CalculadoraImpuestos.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/OACV/x00223019/Empleado.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/OACV/x00223019/Empleado.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/OACV/x00223019/Empresa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/OACV/x00223019/Empresa.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,6 +33,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -67,10 +64,17 @@
       <option name="presentableId" value="Default" />
       <updated>1587170596174</updated>
       <workItem from="1587170599474" duration="2197000" />
+      <workItem from="1587181839274" duration="3081000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="488" y="83" key="#com.intellij.ide.util.MemberChooser" timestamp="1587186002678">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="488" y="83" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1587186002678" />
   </component>
 </project>
