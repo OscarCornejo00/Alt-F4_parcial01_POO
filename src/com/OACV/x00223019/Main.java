@@ -13,6 +13,7 @@ public class Main {
 
     public static void main(String[] args) {
         byte op = 0;
+        CalculadoraImpuestos x = new CalculadoraImpuestos();
 
         String menu = "1. Agregar Empleado\n" +
                 "2. Despedir Empleado\n" +
@@ -39,7 +40,7 @@ public class Main {
                         int mesesContrato = Integer.parseInt(JOptionPane.showInputDialog(null,"Cantidad de meses del Contrato:"));
 
                         Empleado nuevoEmpleado = new ServicioProfesional(nombre, puesto, null,  salario, mesesContrato);
-                        anadirDocumento(nuevoEmpleado);
+                        //anadirDocumento(nuevoEmpleado);
                         planilla.add(nuevoEmpleado);
                         new Empresa("Super Mercado Salvadoreño",planilla);
 
@@ -47,7 +48,7 @@ public class Main {
                         int extension = Integer.parseInt(JOptionPane.showInputDialog(null,"Numero de telefono de la oficina: "));
 
                         Empleado nuevoEmpleado = new PlazaFija(nombre, puesto,null,  salario, extension);
-                        anadirDocumento(nuevoEmpleado);
+                        //anadirDocumento(nuevoEmpleado);
                         planilla.add(nuevoEmpleado);
                         new Empresa("Super Mercado Salvadoreño",planilla);
 
@@ -55,7 +56,7 @@ public class Main {
                     break;
                 case 2://Despedir empleado
                     String despedirEmpleado = JOptionPane.showInputDialog(null,"Nombre del empleado a despedir: ");
-                    planilla.removeIf(obj -> obj.getNombre() == despedirEmpleado);
+                    planilla.removeIf(obj -> obj.getNombre() .equals(despedirEmpleado));
 
                     break;
                 case 3://Mostrar lista de empleados
@@ -64,17 +65,29 @@ public class Main {
 
                     break;
 
-                /*case 4:
+                case 4:
+                    double z;
+                    String  T = " ";
                     String name = JOptionPane.showInputDialog(null,"Nombre del empleado a calcular sueldo: ");
-                    Empleado persona = null;
+                    boolean bus=false;
 
-                    for (Empleado obj : Empresa.getPlanilla()) {
-                        if (obj.getNombre().equalsIgnoreCase(name)) {
-                            persona = obj;
+                    for (Empleado p: planilla){
+                        if(p.getNombre() .equals(name)){
+                            if(p instanceof ServicioProfesional){
+                                T="ServicioProfesional";
+                                bus=true;
+                            }
+
+                            z = x.calcularPago(p.getNombre(),T);
+                            JOptionPane.showMessageDialog(null,"El salario Liquido es: " + z);
                         }
                     }
+                    if(bus==false)JOptionPane.showMessageDialog(null, "NO se encontro empleado!");
 
-                    break;*/
+                    break;
+                case 5://Mostrar totales
+                    JOptionPane.showMessageDialog(null,x.mostrarTotales());
+                    break;
             }
         }while(op != 6);
     }

@@ -1,26 +1,30 @@
 package com.OACV.x00223019;
 
+import javax.swing.*;
+
 public class CalculadoraImpuestos {
-    private static double totalRenta,totalISSS,totalAFP, Pago;
+    private static double totalRenta=0,totalISSS=0,totalAFP=0, Pago=0;
     String ServicioProfesional, PlazaFija;
 
-    private CalculadoraImpuestos(double totalRenta, double totalISSS, double totalAFP) {
-        this.totalRenta = totalRenta;
-        this.totalISSS = totalISSS;
-        this.totalAFP = totalAFP;
+    public CalculadoraImpuestos() {
     }
 
- /*   public double calcularPago(String Empleado, String tipoEmpleado){
-        if (tipoEmpleado == ServicioProfesional){
-            double AFP, ISSS, renta, pago;
-            double salario=0;
+    public double calcularPago(String Empleado, String tipoEmpleado){
+        double AFP=0, ISSS=0, renta/*,pago=0*/;
+        double salario=0;
+
+        for(Empleado s: Main.planilla){
+            if(s.getNombre() .equals(Empleado)){
+                salario=s.getSalario();
+            }
+        }
 
             if (tipoEmpleado == ServicioProfesional){
 
                 double restante = 0;
                 AFP = 0.0625 * salario;
                 ISSS = 0.03 * salario;
-                restante = salario - totalISSS - totalAFP;
+                restante = salario - ISSS - AFP;
 
                 if (restante >= 0.01 && restante <= 472) {
                     renta=0;
@@ -31,31 +35,42 @@ public class CalculadoraImpuestos {
                 } else {
                     renta=0.3*(restante-2038.10)+288.57;
                 }
-                pago=restante-renta;
+                Pago=restante-renta;
 
-                return pago;
             } else {
 
                 renta=0.1*salario;
-                pago=salario-renta;
+                Pago=salario-renta;
 
-                return pago;
             }
 
             totalISSS+=ISSS;
             totalAFP+=AFP;
             totalRenta+=renta;
-        }
-    }
-*/
-    public  String mostrarTotales(String Empleado, String tipoEmpleado){
-        if (tipoEmpleado == ServicioProfesional){
-            return  Empleado;
-        } else {
-            return Empleado;
-        }
+
+        return Pago;
     }
 
+    public  String mostrarTotales(){
+        String totales= " ";
+        totales="Total de renta: "+totalRenta+"\nTotal de ISSS: "+totalISSS+"\nTotal AFP: "+totalAFP;
 
+        return totales;
+    }
 
+    public static double getTotalRenta() {
+        return totalRenta;
+    }
+
+    public static double getTotalISSS() {
+        return totalISSS;
+    }
+
+    public static double getTotalAFP() {
+        return totalAFP;
+    }
+
+    public void Totales(){
+        
+    }
 }
