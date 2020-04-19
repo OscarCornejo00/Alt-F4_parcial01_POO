@@ -3,8 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="1154401b-7db7-4e30-b692-d8312567918c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/OACV/x00223019/CalculadoraImpuestos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/OACV/x00223019/CalculadoraImpuestos.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/OACV/x00223019/Documento.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/OACV/x00223019/Documento.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/OACV/x00223019/Empleado.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/OACV/x00223019/Empleado.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/OACV/x00223019/Empresa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/OACV/x00223019/Empresa.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/OACV/x00223019/PlazaFija.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/OACV/x00223019/PlazaFija.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/OACV/x00223019/ServicioProfesional.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/OACV/x00223019/ServicioProfesional.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,7 +69,7 @@
       <updated>1587170596174</updated>
       <workItem from="1587170599474" duration="2197000" />
       <workItem from="1587181839274" duration="3081000" />
-      <workItem from="1587251279353" duration="1909000" />
+      <workItem from="1587251279353" duration="3652000" />
     </task>
     <servers />
   </component>
@@ -73,10 +77,10 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="2408" y="82" key="#com.intellij.ide.util.MemberChooser" timestamp="1587252801453">
+    <state x="2408" y="82" key="#com.intellij.ide.util.MemberChooser" timestamp="1587254527754">
       <screen x="1920" y="0" width="1365" height="720" />
     </state>
     <state x="488" y="83" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1587186002678" />
-    <state x="2408" y="82" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1080/1920.0.1365.720@1920.0.1365.720" timestamp="1587252801453" />
+    <state x="2408" y="82" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1080/1920.0.1365.720@1920.0.1365.720" timestamp="1587254527754" />
   </component>
 </project>

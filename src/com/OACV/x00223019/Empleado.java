@@ -2,8 +2,8 @@ package com.OACV.x00223019;
 
 import java.util.ArrayList;
 
-public class Empleado {
-    protected String nombre, puesto
+abstract class Empleado {
+    protected String nombre, puesto;
     protected ArrayList<Documento> documentos;
     protected double salario;
 
@@ -26,11 +26,11 @@ public class Empleado {
         return documentos;
     }
 
-    public void addDocumento(Documento){
+    public void addDocumento(String Documento){
 
     }
 
-    public void removeDocumento(String){
+    public void removeDocumento(String Documento){
 
     }
 
@@ -38,7 +38,7 @@ public class Empleado {
         return salario;
     }
 
-    public void setSalario(double){
-        
+    public void setSalario(double Salario){
+
     }
 }

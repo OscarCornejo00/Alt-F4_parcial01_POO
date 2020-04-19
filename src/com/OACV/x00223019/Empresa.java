@@ -19,11 +19,11 @@ public class Empresa {
         return list;
     }
 
-    public void addEmpleado(Empleado){
+    public void addEmpleado(String Empleado){
 
     }
 
-    public void quitEmpleado(String){
+    public void quitEmpleado(String Empleado){
 
     }
 
