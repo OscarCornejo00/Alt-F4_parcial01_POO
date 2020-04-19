@@ -3,10 +3,11 @@ package com.OACV.x00223019;
 import javax.print.Doc;
 import javax.swing.*;
 import java.util.ArrayList;
+import java.util.Scanner;
 
 
 public class Main {
-
+    static Scanner in = new Scanner(System.in);
     static ArrayList<Documento> Documento = new ArrayList<>();
     static ArrayList<Empleado> planilla = new ArrayList<>();
 
@@ -26,41 +27,35 @@ public class Main {
             switch (op){
                 case 1://Agregar empleado
                     int aux=0;
-                    String tipo=" ";
 
                     String[] botones = {"Servicio Profesional", "Plaza Fija"};
 
                     aux = JOptionPane.showOptionDialog(null, "Tipo de empleado a agregar: ", "Type", JOptionPane.DEFAULT_OPTION, JOptionPane.QUESTION_MESSAGE, null, botones, botones[0]);
-                    if (aux == 0) {
-                        tipo="Servicio Profesional";
-                    }
-                    if (aux == 1) {
-                        tipo="Plaza Fija";
-                    }
-
-
                     String nombre = JOptionPane.showInputDialog(null,"Nombre del empleado: ");
                     String puesto = JOptionPane.showInputDialog(null, "Puesto del empleado: ");
-                    String nombreDocumento = JOptionPane.showInputDialog(null,"Tipo de documento (DUI, Pasaporte, Carnet): ");
-                    String numeroDocumento = JOptionPane.showInputDialog(null, "Digite numero de documento: ");
-                    Documento nuevoDocumento = new Documento(nombreDocumento,numeroDocumento);
                     double salario = Double.parseDouble(JOptionPane.showInputDialog(null,"Salario del empleado: "));
 
-                    if (tipo.equalsIgnoreCase("Sevicio Profesional")){
+                    if (aux == 0){
                         int mesesContrato = Integer.parseInt(JOptionPane.showInputDialog(null,"Cantidad de meses del Contrato:"));
 
-                        planilla.add(new ServicioProfesional(nombre, puesto, Documento, salario, mesesContrato));
+                        Empleado nuevoEmpleado = new ServicioProfesional(nombre, puesto, null,  salario, mesesContrato);
+                        anadirDocumento(nuevoEmpleado);
+                        planilla.add(nuevoEmpleado);
+                        new Empresa("Super Mercado Salvadoreño",planilla);
 
-                    } else if (tipo.equalsIgnoreCase("Plaza Fija")) {
+                    } else if (aux==1) {
                         int extension = Integer.parseInt(JOptionPane.showInputDialog(null,"Numero de telefono de la oficina: "));
 
-                        planilla.add(new PlazaFija(nombre, puesto, Documento, salario, extension));
+                        Empleado nuevoEmpleado = new PlazaFija(nombre, puesto,null,  salario, extension);
+                        anadirDocumento(nuevoEmpleado);
+                        planilla.add(nuevoEmpleado);
+                        new Empresa("Super Mercado Salvadoreño",planilla);
 
                     }
                     break;
                 case 2://Despedir empleado
-                    String nombreB = JOptionPane.showInputDialog(null,"Nombre del empleado a despedir: ");
-                    planilla.removeIf(s -> s.getNombre() == nombreB);
+                    String despedirEmpleado = JOptionPane.showInputDialog(null,"Nombre del empleado a despedir: ");
+                    planilla.removeIf(obj -> obj.getNombre() == despedirEmpleado);
 
                     break;
                 case 3://Mostrar lista de empleados
@@ -82,5 +77,17 @@ public class Main {
                     break;*/
             }
         }while(op != 6);
+    }
+
+    public static void anadirDocumento(Empleado e){
+        byte op = 0;
+
+            String nombreDocumento = JOptionPane.showInputDialog(null,"Tipo de documento (DUI, NIT, Pasaporte, Carnet) : ");
+            String numeroDocumento = JOptionPane.showInputDialog(null, "Digite numero de documento: ");
+
+            Documento doc = new Documento(nombreDocumento, numeroDocumento);
+
+            e.addDocumento(doc);
+    return;
     }
 }

@@ -26,7 +26,8 @@ abstract class Empleado {
         return documentos;
     }
 
-    public void addDocumento(String Documento){
+    public void addDocumento(Documento d){
+        documentos.add(d);
 
     }
 
@@ -40,5 +41,15 @@ abstract class Empleado {
 
     public void setSalario(double Salario){
 
+    }
+
+    @Override
+    public String toString() {
+        return "Empleado{" +
+                "nombre='" + nombre + '\'' +
+                ", puesto='" + puesto + '\'' +
+                ", documentos=" + documentos +
+                ", salario=" + salario +
+                '}';
     }
 }
