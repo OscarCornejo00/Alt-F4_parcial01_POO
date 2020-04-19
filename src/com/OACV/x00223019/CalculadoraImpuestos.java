@@ -1,7 +1,8 @@
 package com.OACV.x00223019;
 
 public class CalculadoraImpuestos {
-    private double totalRenta,totalISSS,totalAFP;
+    private static double totalRenta,totalISSS,totalAFP, Pago;
+    String ServicioProfesional, PlazaFija;
 
     private CalculadoraImpuestos(double totalRenta, double totalISSS, double totalAFP) {
         this.totalRenta = totalRenta;
@@ -9,12 +10,22 @@ public class CalculadoraImpuestos {
         this.totalAFP = totalAFP;
     }
 
-    public double calcularPago(double Empleado){
-
+    public double calcularPago(String Empleado, String tipoEmpleado){
+        if (tipoEmpleado == ServicioProfesional){
+            return Pago;
+        } else {
+            return Pago;
+        }
     }
 
-    public  String mostrarTotales(){
-
+    public  String mostrarTotales(String Empleado, String tipoEmpleado){
+        if (tipoEmpleado == ServicioProfesional){
+            return  Empleado;
+        } else {
+            return Empleado;
+        }
     }
+
+
 
 }
