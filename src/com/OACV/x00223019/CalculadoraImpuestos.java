@@ -1,7 +1,5 @@
 package com.OACV.x00223019;
 
-import javax.swing.*;
-
 public class CalculadoraImpuestos {
     private static double totalRenta=0,totalISSS=0,totalAFP=0, Pago=0;
     String ServicioProfesional, PlazaFija;

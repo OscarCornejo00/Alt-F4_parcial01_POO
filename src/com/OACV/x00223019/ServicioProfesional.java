@@ -1,12 +1,10 @@
 package com.OACV.x00223019;
 
-import java.util.ArrayList;
-
 public class ServicioProfesional extends Empleado {
     private int mesesContrato;
 
-    public ServicioProfesional(String nombre, String puesto, ArrayList<Documento> documentos, double salario, int mesesContrato) {
-        super(nombre, puesto, documentos, salario);
+    public ServicioProfesional(String nombre, String puesto,  double salario, int mesesContrato) {
+        super(nombre, puesto, salario);
         this.mesesContrato = mesesContrato;
     }
 
@@ -19,7 +17,10 @@ public class ServicioProfesional extends Empleado {
     }
 
     public String toString() {
-        return "Nombre: " + getNombre() +  " || Puesto:  " + getPuesto()+
-                " || Documento: " + getDocumentos() + " || Salario: "+getSalario()+ " || Duración de contrato: "+getMeses();
+        return "Tipo: Servicio Profesional" + "\n" +
+                "Nombre: " + getNombre () +  "\n" +
+                "Puesto:  " + getPuesto() + "\n" +
+                "Salario: "+getSalario() + "\n" +
+                "Meses de duracion contrato: "+mesesContrato + "\n\n" ;
     }
 }

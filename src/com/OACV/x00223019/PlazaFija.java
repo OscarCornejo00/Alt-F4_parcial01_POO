@@ -1,14 +1,13 @@
 package com.OACV.x00223019;
 
-import java.util.ArrayList;
-
-public class PlazaFija extends Empleado {
+public class PlazaFija extends Empleado{
     private int extensión;
 
-    public PlazaFija(String nombre, String puesto, ArrayList<Documento> documentos, double salario, int extensión) {
-        super(nombre, puesto, documentos, salario);
+    public PlazaFija(String nombre, String puesto, double salario, int extensión) {
+        super(nombre, puesto, salario);
         this.extensión = extensión;
     }
+
 
 
     public int getExtensión() {
@@ -20,7 +19,10 @@ public class PlazaFija extends Empleado {
     }
 
     public String toString() {
-        return "Nombre: " + getNombre() +  " || Puesto:  " + getPuesto()+
-                " || Documento: " + getDocumentos() + " || Salario: "+getSalario()+ " || Extensión: "+getExtensión();
+        return "Tipo: Plaza Fija" + "\n" +
+                "Nombre: " + getNombre () +  "\n" +
+                "Puesto:  " + getPuesto() + "\n" +
+                "Salario: "+getSalario() + "\n" +
+                "Extensión: "+getExtensión() + "\n\n";
     }
 }

@@ -8,7 +8,6 @@ import java.util.Scanner;
 
 public class Main {
     static Scanner in = new Scanner(System.in);
-    static ArrayList<Documento> Documento = new ArrayList<>();
     static ArrayList<Empleado> planilla = new ArrayList<>();
 
     public static void main(String[] args) {
@@ -33,23 +32,28 @@ public class Main {
 
                     aux = JOptionPane.showOptionDialog(null, "Tipo de empleado a agregar: ", "Type", JOptionPane.DEFAULT_OPTION, JOptionPane.QUESTION_MESSAGE, null, botones, botones[0]);
                     String nombre = JOptionPane.showInputDialog(null,"Nombre del empleado: ");
+                    String nombreDocumento = JOptionPane.showInputDialog(null, "Tipo de documento (DUI, NIT, Pasaporte, Carnet) : ");
+                    String numeroDocumento = JOptionPane.showInputDialog(null, "Digite numero de documento: ");
                     String puesto = JOptionPane.showInputDialog(null, "Puesto del empleado: ");
                     double salario = Double.parseDouble(JOptionPane.showInputDialog(null,"Salario del empleado: "));
+
+
+                    Documento doc = new Documento(nombreDocumento, numeroDocumento);
 
                     if (aux == 0){
                         int mesesContrato = Integer.parseInt(JOptionPane.showInputDialog(null,"Cantidad de meses del Contrato:"));
 
-                        Empleado nuevoEmpleado = new ServicioProfesional(nombre, puesto, null,  salario, mesesContrato);
-                        //anadirDocumento(nuevoEmpleado);
+                        Empleado nuevoEmpleado = new ServicioProfesional(nombre, puesto, salario, mesesContrato);
                         planilla.add(nuevoEmpleado);
+
                         new Empresa("Super Mercado Salvadoreño",planilla);
 
                     } else if (aux==1) {
                         int extension = Integer.parseInt(JOptionPane.showInputDialog(null,"Numero de telefono de la oficina: "));
 
-                        Empleado nuevoEmpleado = new PlazaFija(nombre, puesto,null,  salario, extension);
-                        //anadirDocumento(nuevoEmpleado);
+                        Empleado nuevoEmpleado = new PlazaFija(nombre, puesto, salario, extension);
                         planilla.add(nuevoEmpleado);
+
                         new Empresa("Super Mercado Salvadoreño",planilla);
 
                     }
@@ -90,17 +94,5 @@ public class Main {
                     break;
             }
         }while(op != 6);
-    }
-
-    public static void anadirDocumento(Empleado e){
-        byte op = 0;
-
-            String nombreDocumento = JOptionPane.showInputDialog(null,"Tipo de documento (DUI, NIT, Pasaporte, Carnet) : ");
-            String numeroDocumento = JOptionPane.showInputDialog(null, "Digite numero de documento: ");
-
-            Documento doc = new Documento(nombreDocumento, numeroDocumento);
-
-            e.addDocumento(doc);
-    return;
     }
 }

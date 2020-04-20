@@ -1,5 +1,6 @@
 package com.OACV.x00223019;
 
+import javax.print.Doc;
 import java.util.ArrayList;
 
 abstract class Empleado {
@@ -7,10 +8,10 @@ abstract class Empleado {
     protected ArrayList<Documento> documentos;
     protected double salario;
 
-    public Empleado(String nombre, String puesto, ArrayList<Documento> documentos, double salario) {
+    public Empleado(String nombre, String puesto, double salario) {
         this.nombre = nombre;
         this.puesto = puesto;
-        this.documentos = documentos;
+        documentos = documentos;
         this.salario = salario;
     }
 
@@ -48,8 +49,9 @@ abstract class Empleado {
         return "Empleado{" +
                 "nombre='" + nombre + '\'' +
                 ", puesto='" + puesto + '\'' +
-                ", documentos=" + documentos +
                 ", salario=" + salario +
                 '}';
     }
+
+
 }
